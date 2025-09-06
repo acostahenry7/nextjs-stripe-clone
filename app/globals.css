@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@import "tailwindcss";
+
+@layer utilities {
+  .main_container {
+    @apply flex flex-col  /*px-8 py-4 lg:px-4*/ md:py-0 box-border;
+  }
+
+  .section_container {
+    @apply border-slate-200 border-l-1 border-dashed border-r-1 px-8 xl:px-4 pb-20 md:pb-30 max-w-[1080px] w-full mx-auto h-full;
+  }
+
+  .section_title {
+    @apply text-[#635bff] font-bold text-[18px];
+  }
+
+  .section_heading {
+    @apply text-[#0a2540] text-[32px] font-bold;
+  }
+
+  .bg_wrapper {
+    @apply md:[clip-path:polygon(0_0,100%_0,100%_40%,0_100%)] 
+    lg:[clip-path:polygon(0_0,100%_0,100%_30%,0_100%)] [clip-path:polygon(0_0,100%_0,100%_80%,0_100%)];
+  }
+
+  .hero-text {
+    @apply md:text-7xl lg:text-[84px] text-5xl font-bold leading-14 md:leading-20 lg:leading-24 text-[#12163c];
+  }
+
+  .body-text {
+    @apply text-[#425466] text-[18px];
+  }
+}
+
+#button > span:last-child {
+  transition: transform 150ms ease-in-out;
+}
+
+#button:hover > span:last-child {
+  transform: translateX(5px);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  overflow-x: hidden;
+}
